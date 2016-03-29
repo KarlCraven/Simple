@@ -20,12 +20,20 @@
                 // if the file isn't the index page
                 if ($fileName != 'index') {
                     
-                    // store display name and file name in child array
-                    $files[$fileInfo->getMTime()][] = array($fileName, $fileInfo->getFilename(), $fileInfo->getMTime());
+                    // store display name, file name and filetime in child array
+                    $files[] = array($fileName, $fileInfo->getFilename(), $fileInfo->getMTime());
                 }
             }
         }
     }
+    
+    // function to sort page array by time
+    function sortByTime($a, $b) {
+      return $a[2] - $b[2];
+    }
+    
+    // sort the array by modified time) 
+    usort($files, "sortByTime");
 ?>
 
 <?php

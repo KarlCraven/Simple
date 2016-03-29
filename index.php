@@ -11,19 +11,13 @@
         <ul>
         
         <?php
-            // sort the primary array (i.e. by modified time)            
-            ksort($files);
+        
+        // iterate through the sorted page array
+        foreach ($files as $file) {
             
-            // iterate through the sorted timestamp array
-            foreach ($files as $modTime) {
-                
-                // iterate through each page for each timestamp
-                foreach ($modTime as $pageInfo) {
-                
-                    // output link to page
-                    echo('<li><a href="' . $pageInfo[1] . '">' . $pageInfo[0] . '</a> <small>(' . date("m.d.Y", $pageInfo[2]) . ')</small></li>');
-                }
-            }
+            // output link to page
+            echo('<li><a href="' . $file[1] . '">' . $file[0] . '</a> <small>(' . date("m.d.Y", $file[2]) . ')</small></li>');
+        }
         ?>
         
         <?php include('includes/footer.php'); ?>

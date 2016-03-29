@@ -5,6 +5,7 @@
     </head>
     <body>
         <?php include('includes/header.php'); ?>
+        <?php include('includes/navlinks.php'); ?>
         
         <!-- Enter page title here -->
         <h2>Page Title</h2>
