@@ -1,3 +1,5 @@
+<?php $page = 0; ?>
+
 <html>
     <head>
         <?php include('includes/head.php'); ?>
@@ -13,10 +15,12 @@
         <?php
         
         // iterate through the sorted page array
-        foreach ($files as $file) {
+        foreach (array_reverse($pages) as $page) {
             
-            // output link to page
-            echo('<li><a href="' . $file[1] . '">' . $file[0] . '</a> <small>(' . date("m.d.Y", $file[2]) . ')</small></li>');
+            if ($page[0] != 0) {
+                // output link to page
+                echo('<li><a href="' . $page[2] . '">' . $page[1] . '</a> <small><span id="timestamp">(' . $page[3] . ')</span></small></li>');
+            }
         }
         ?>
         

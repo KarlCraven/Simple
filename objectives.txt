@@ -1,5 +1,0 @@
-Objectives
-==========
-1. Pages added to directory are automatically added to index list and can be navigated to from adjacent pages.
-2. New pages only require content; header and footer are included automatically.
-3. No comment system; no social media buttons.

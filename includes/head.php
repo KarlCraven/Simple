@@ -1,44 +1,13 @@
 <?php
-    $files = array();
-    $dir = new DirectoryIterator('.');
-
-    // iterate through directory
-    foreach ($dir as $fileInfo) {
-        
-        // if the directory item is a file
-        if ($fileInfo->isFile()) {
-            
-            // get the extension of the file
-            $extension = strtolower(pathinfo($fileInfo->getFilename(), PATHINFO_EXTENSION));
-            
-            // check if the extension is php
-            if ($extension == 'php') {
-                
-                // get filename, replacing undescores with spaces
-                $fileName = str_replace('_', ' ', pathinfo($fileInfo->getFilename(), PATHINFO_FILENAME));
-                
-                // if the file isn't the index page
-                if ($fileName != 'index') {
-                    
-                    // store display name, file name and filetime in child array
-                    $files[] = array($fileName, $fileInfo->getFilename(), $fileInfo->getMTime());
-                }
-            }
-        }
-    }
+    $pages = array();
     
-    // function to sort page array by time
-    function sortByTime($a, $b) {
-      return $a[2] - $b[2];
+    $directory = fopen("pagelist.txt", "r") or die("Unable to open file!");
+    while(!feof($directory)) {
+      $pages[] = explode(", ", fgets($directory));
     }
-    
-    // sort the array by modified time) 
-    usort($files, "sortByTime");
+    fclose($directory);
 ?>
 
-<?php
-    $thisPageModTime = getlastmod();
-?>
         
 <?php
    $bg = "#252525";
@@ -72,7 +41,10 @@
         margin: 0.6em 0 0.2em 0;
     }
     
-    h1 {font-size: 2.4em;}
+    h1 {
+        font-size: 2.4em;
+        margin-bottom: 0.5em;
+    }
     
     h2 {font-size: 2.15em;}
     
@@ -84,9 +56,8 @@
     
     p {margin: 0 0 0.25em 0;}
     
-    h1, footer {
+    h1, nav, footer {
         text-align: center;
-        font-style: italic;
     }
     
     img {
@@ -94,5 +65,9 @@
         max-height: 70vh;
         display: block;
         margin: 0 auto;
+    }
+    
+    h1, nav, footer, #timestamp {
+        font-style: italic;
     }
 </style>

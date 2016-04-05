@@ -1,25 +1,16 @@
-<?php
-    // initialize blank prev and next variables
-    $nextFile = '';
-    $prevFile = '';
-    
-    // iterate through the sorted timestamp array
-    $thisPage = current($files);
-        
-    // identify the index of the current page in the array
-    while ($thisPageModTime != $thisPage[2]) {
-        
-        $thisPage = next($files);
-    }
-        
+<?php    
     // set the previous and next link variables using the values of the adjacent indexes
-    $prevFile = prev($files);
-    $nextFile = next($files);
-    $nextFile = next($files);
-  
-    // if the current page is the first page, leave the previous variable blank
+    if ($page > 0) {
+        $prevFile = $pages[$page - 1];
+        echo('<a href="' . $prevFile[2] . '">&lt; ' . $prevFile[1] . '</a>');
+    }
     
-    // if the current page is the last page, leave the next variable blank
+    if ($page > 0 && $page < sizeof($pages) - 1) {
+        echo('  |  ');
+    }
     
-    echo('< <a href="' . $prevFile[1] . '">' . $prevFile[0] . '</a>  |  <a href="' . $nextFile[1] . '">' . $nextFile[0] . '</a> >');
+    if ($page < sizeof($pages) - 1) {
+        $nextFile = $pages[$page + 1];
+        echo('<a href="' . $nextFile[2] . '">' . $nextFile[1] . ' &gt;</a>');
+    }
 ?>

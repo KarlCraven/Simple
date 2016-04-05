@@ -1,16 +1,15 @@
+<?php $page = 2; ?>
+
 <html>
     <head>
         <?php include('includes/head.php'); ?>
-        <title>Page title</title>
+        <title><?php echo $pages[$page][1]; ?></title>
     </head>
     <body>
         <?php include('includes/header.php'); ?>
-        <?php include('includes/navlinks.php'); ?>
         
-        <!-- Enter page title here -->
-        <h2>Page Title</h2>
-        
-        <p><?php echo(date("m.d.Y", $thisPageModTime)); ?></p>
+        <h2><?php echo $pages[$page][1]; ?></h2>
+        <p id="timestamp"><?php echo $pages[$page][3]; ?></p>
         
         <!-- Start page content -->
         <p><strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</strong> Nam sit amet metus a enim mattis euismod. <a href="#">Vestibulum</a> a augue sagittis, gravida neque ac, tincidunt metus. Quisque posuere maximus nunc in aliquam. Mauris aliquet sed est a tincidunt. Phasellus pretium eros sed ex porttitor feugiat. Donec magna erat, tristique at leo eget, cursus placerat ipsum.</p>
