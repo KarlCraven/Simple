@@ -15,6 +15,7 @@
    $fgbright = "#CCC";
    $accent = "#C00000";
    $hover = "#DF0000";
+   $dead = "#757575";
 ?>
 
 <style>
@@ -25,12 +26,20 @@
         line-height: 1.33em;
     }
     
-    a {
+    a, .deadlink {
         color: <?php echo $fgbright; ?>;
         text-decoration: none;
-        background: <?php echo $accent; ?>;
         padding: 0 0.2em;
         border-radius: 0.2em;
+    }
+    
+    a {
+        background: <?php echo $accent; ?>;
+    }
+    
+    .deadlink {
+        background: <?php echo $dead; ?>;
+        cursor: not-allowed;
     }
     
     a:hover {background: <?php echo $hover; ?>;}
@@ -60,6 +69,10 @@
         text-align: center;
     }
     
+    nav {
+        min-width: 425px;
+    }
+    
     img {
         max-width: 98%;
         max-height: 70vh;
@@ -69,5 +82,22 @@
     
     h1, nav, footer, #timestamp {
         font-style: italic;
+    }
+    
+    #nav-left, #nav-center, #nav-right {
+        display: inline;
+    }
+    
+    #nav-left, #nav-right {
+        width: 49%;
+        min-width: 210px;
+    }
+    
+    #nav-left {
+        text-align: right;
+    }
+    
+    #nav-right {
+        text-align: left;
     }
 </style>
