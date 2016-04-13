@@ -1,4 +1,6 @@
-<hr>
-<footer>
-    <p><small>What's the point of a footer?</small></p>
-</footer>
+        <hr>
+        <footer>
+            <p><small>What's the point of a footer?</small></p>
+        </footer>
+    </body>
+</html>
