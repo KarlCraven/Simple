@@ -1,6 +1,6 @@
         <hr>
         <footer>
-            <p><small>What's the point of a footer?</small></p>
+            <a href="new.php">Add a new page</a>
         </footer>
     </body>
 </html>

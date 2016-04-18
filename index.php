@@ -12,7 +12,7 @@
         
         if ($page[0] != 0) {
             // output link to page
-            echo('<li><a href="' . $page[2] . '">' . $page[1] . '</a> <small><span id="timestamp">(' . $page[3] . ')</span></small></li>');
+            echo('<li><a href="' . $page[2] . '">' . $page[1] . '</a> <small><span id="timestamp">(' . trim($page[3]) . ')</span></small></li>');
         }
     }
     ?>

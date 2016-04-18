@@ -3,7 +3,7 @@
         <?php
             $pages = array();
             
-            $directory = fopen("pagelist.txt", "r") or die("Unable to open file!");
+            $directory = fopen("includes/pagelist.txt", "r") or die("Unable to open file!");
             while(!feof($directory)) {
               $pages[] = explode(", ", fgets($directory));
             }
@@ -134,4 +134,7 @@
             </nav>
         </header>
         <h2><?php echo $pages[$page][1]; ?></h2>
-        <p id="timestamp"><?php echo $pages[$page][3]; ?></p>
+        <?php if ($page > 0) {
+            echo('<p id="timestamp">' . $pages[$page][3] . '</p>');
+        }
+        ?>
