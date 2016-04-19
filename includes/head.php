@@ -55,10 +55,12 @@
             h1 {
                 font-size: 2.4em;
                 margin-bottom: 0.5em;
-                line-height: 1.8em;
             }
             
-            h2 {font-size: 2.15em;}
+            h2 {
+                font-size: 2.15em;
+                line-height: 1em;
+            }
             
             h3 {font-size: 1.9em;}
             
@@ -113,6 +115,15 @@
                         } else {
                             echo('<span class="deadlink">&#171; First</span>&nbsp;<span class="deadlink">&#8249; Prev</span>');
                         }
+                    }
+                    ?>
+                </div>
+                <div id="nav-center">
+                    <?php
+                    // random page
+                    if ($page > 0) {
+                        $randomPageIndex = $pages[rand(1, sizeof($pages) - 1)];
+                        echo('<a href="' . $randomPageIndex[2] . '" title="Random page!">Random</a>');
                     }
                     ?>
                 </div>
