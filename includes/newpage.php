@@ -13,8 +13,8 @@
         
     // get page info from form
     $newPageNum = $pages[sizeof($pages) - 1][0] + 1;
-    $newPageTitle = str_replace(',', '', $_POST["post-title"]);
-    $newPageFileName = urlencode(strtolower(str_replace(' ', '_', $newPageTitle))) . '.php';
+    $newPageTitle = str_replace(',', '&#44;', $_POST["post-title"]);
+    $newPageFileName = strtolower(preg_replace("/[^A-Za-z0-9_]/", '', str_replace(' ', '_',$newPageTitle))) . '.php';
     $newPageContent = $_POST["post-content"];
     
     // set default timezone and use current date and time for page timestamp

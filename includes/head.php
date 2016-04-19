@@ -55,6 +55,7 @@
             h1 {
                 font-size: 2.4em;
                 margin-bottom: 0.5em;
+                line-height: 1.8em;
             }
             
             h2 {font-size: 2.15em;}

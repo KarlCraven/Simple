@@ -1,0 +1,1 @@
+<?php $page = 9; ?><?php include('includes/head.php'); ?><!-- Start page content -->test<!-- End page content --><?php include('includes/footer.php'); ?>

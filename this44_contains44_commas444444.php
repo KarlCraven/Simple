@@ -1,0 +1,1 @@
+<?php $page = 10; ?><?php include('includes/head.php'); ?><!-- Start page content -->Commas?!<!-- End page content --><?php include('includes/footer.php'); ?>

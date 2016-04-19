@@ -1,0 +1,1 @@
+<?php $page = 8; ?><?php include('includes/head.php'); ?><!-- Start page content -->Some scintillating content goes here. <!-- End page content --><?php include('includes/footer.php'); ?>
