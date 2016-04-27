@@ -9,3 +9,6 @@
 8, Mobile Test of New Page, mobile_test_of_new_page.php, 2016-04-17 23:52
 9, THIS *Title& CoNtAiNs... Non-ALPHAnumeric Characters!, this_title_contains_nonalphanumeric_characters.php, 2016-04-18 21:16
 10, This&#44; Contains&#44; Commas&#44;&#44;&#44;, this44_contains44_commas444444.php, 2016-04-18 21:20
+11, I had to LOG IN to crate this page!, i_had_to_log_in_to_crate_this_page.php, 2016-04-26 21:11
+12, Correct Password Entered, correct_password_entered.php, 2016-04-26 21:25
+13, Corrected login details, corrected_login_details.php, 2016-04-26 21:35

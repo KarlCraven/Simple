@@ -1,0 +1,1 @@
+<?php $page = 12; ?><?php include('includes/head.php'); ?><!-- Start page content -->dkja hkjhasdashkd<!-- End page content --><?php include('includes/footer.php'); ?>
